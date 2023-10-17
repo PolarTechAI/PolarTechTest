@@ -1,24 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Test</title>
+    <title>PolarTech Testing</title>
+    <style>
+        /* Basic styles for centering and padding */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        h1 {
+            padding: 1rem;
+            background-color: #17ad6b;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .vfrc-widget--launcher::before {
+            content: 'Tere, olen Pet24 Virtuaalne Klienditugi!🐶';
+            display: block;
+            position: absolute;
+            bottom: calc( 100% + 20px);
+            right: 0;
+            width: 200px;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #17ad6b;
+            color: #ffffff;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .vfrc-widget--launcher::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0;
+            border-color: #17ad6b transparent transparent transparent;
+            bottom: calc( 100% + 20px);
+            right: 30px;
+            transform: translate(50%, 100%);
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Place for your chatbot integration -->
-  <script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '652cf82bb7abb70008970b62' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
+    <header>
+        <h1>PolarTech Testing</h1>
+    </header>
+
+    <div class="container">
+        <h2>Pet24 Virtuaalne Klienditugi</h2>
+        
+        <!-- Placeholder for your chatbot integration -->
+        <script type="text/javascript">
+            (function(d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function() {
+                    window.voiceflow.chat.load({
+                        verify: { projectID: '652cf82bb7abb70008970b62' },
+                        url: 'https://general-runtime.voiceflow.com',
+                        versionID: 'production'
+                    });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+        </script>
+    </div>
+
+    <footer>
+        <p>Kontakt:</p>
+        <p>PolarTech</p>
+        <p>Email: polartechai@gmail.com</p>
+        <p>Telefon: +372 529 4950</p>
+    </footer>
 </body>
+
 </html>
+
+
