@@ -27,7 +27,7 @@
             padding: 0 20px;
             display: flex;
             flex-direction: column;
-            gap: 50px; /* Added spacing between header and footer */
+            gap: 50px;
         }
 
         header, footer {
@@ -39,9 +39,9 @@
 
         h1 {
             font-weight: 700;
-            font-size: 2.5em; /* Increased font size */
-            color: #2c3e50; /* Darker shade for emphasis */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle text shadow */
+            font-size: 2.5em;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -79,6 +79,25 @@
             bottom: calc( 100% + 20px);
             right: 30px;
             transform: translate(50%, 100%);
+        }
+
+        /* Responsive styles for mobile screens */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 0;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            footer {
+                padding: 10px;
+            }
         }
     </style>
 </head>
