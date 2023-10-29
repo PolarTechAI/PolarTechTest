@@ -10,12 +10,10 @@
         /* Basic styles */
         body {
             font-family: 'Open Sans', sans-serif;
-            padding: 50px 0;
+            margin: 0;
             text-align: center;
-            background-image: url('https://img.freepik.com/free-vector/minimalist-white-background-with-neumorphic-circle_1017-39167.jpg?w=2000&t=st=1697547724~exp=1697548324~hmac=2cc12c9228f7dbc8e65a2281d1f96a5008ccfcb087fbcc1e153a64cce9c12102');
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #333;
+            background-color: black; /* Changed background to black */
+            color: #fff; /* Changed text color to white */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -23,70 +21,42 @@
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 20px;
+            justify-content: space-between;
+            height: 100%;
         }
 
-        header, footer {
-            background-color: rgba(255,255,255,0.8);
+        header, .contact-info {
+            background-color: rgba(0,0,0,0.8); /* Changed background to semi-transparent black */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #fff; /* Changed text color to white */
         }
 
         h1 {
             font-weight: 700;
             font-size: 2.5em;
-            color: #2c3e50;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            color: #fff; /* Changed text color to white */
         }
 
-        footer {
-            margin-top: auto;
+        .gif-container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
         }
 
-        .vfrc-widget--launcher::before {
-            content: 'Tere, olen Pet24 Virtuaalne Klienditugi!🐶';
-            display: block;
-            position: absolute;
-            bottom: calc( 100% + 20px);
-            right: 0;
-            width: 200px;
-            padding: 10px;
-            font-size: 14px;
-            border-radius: 5px;
-            background-color: #17ad6b;
-            color: #ffffff;
-            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-        }
-
-        .vfrc-widget--launcher::after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 10px 0;
-            border-color: #17ad6b transparent transparent transparent;
-            bottom: calc( 100% + 20px);
-            right: 30px;
-            transform: translate(50%, 100%);
+        .gif-container img {
+            max-width: 50%; /* Resize the GIF */
+            height: auto;
         }
 
         /* Responsive styles for mobile screens */
         @media (max-width: 768px) {
-            body {
-                padding: 20px 0;
-            }
-
             .container {
                 padding: 0 10px;
             }
@@ -95,8 +65,12 @@
                 font-size: 2em;
             }
 
-            footer {
+            .contact-info {
                 padding: 10px;
+            }
+
+            .gif-container img {
+                max-width: 80%; /* Resize the GIF for mobile screens */
             }
         }
     </style>
@@ -106,29 +80,35 @@
         <header>
             <h1>PolarTech Test - Pet24 Virtuaalne Klienditugi</h1>
         </header>
-      
-        <!-- Placeholder for your chatbot integration -->
-        <script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '6538cccb38d845000705306d' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-      
-        <footer>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
             <p><strong>Kontakt:</strong></p>
             <p>PolarTech</p>
             <p><i class="fas fa-envelope"></i> Email: polartechai@gmail.com</p>
             <p><i class="fas fa-phone-alt"></i> Telefon: +372 529 4950</p>
             <p><i class="fas fa-map-marker-alt"></i> Location: Tallinn, Estonia</p>
-        </footer>
+        </div>
+
+        <!-- GIF Container -->
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/bc/1c/4e/bc1c4eb282f3f00e950ab1b9945bd41e.gif" alt="GIF">
+        </div>
+      
+        <!-- Placeholder for your chatbot integration -->
+        <script type="text/javascript">
+            (function(d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function() {
+                    window.voiceflow.chat.load({
+                        verify: { projectID: '6538cccb38d845000705306d' },
+                        url: 'https://general-runtime.voiceflow.com',
+                        versionID: 'production'
+                    });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+        </script>
     </div>
 </body>
 </html>
