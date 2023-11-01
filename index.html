@@ -55,6 +55,21 @@
             height: auto;
         }
 
+        .vfrc-widget--launcher::before {
+            content: 'Tere, olen Pet24 Virtuaalne Klienditugi!🐶';
+            display: block;
+            position: absolute;
+            bottom: calc( 100% + 20px);
+            right: 0;
+            width: 200px;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #17ad6b;
+            color: #ffffff;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
         /* Responsive styles for mobile screens */
         @media (max-width: 768px) {
             .container {
@@ -73,6 +88,15 @@
                 max-width: 80%; /* Resize the GIF for mobile screens */
             }
         }
+
+        .contact-info a {
+            color: #17ad6b; /* Hyperlink color */
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +108,7 @@
         <!-- Contact Information -->
         <div class="contact-info">
             <p><strong>Kontakt:</strong></p>
-            <p>PolarTech</p>
+            <p><a href="https://www.polartech.ee" target="_blank">Polartech.ee Veebileht</a></p>
             <p><i class="fas fa-envelope"></i> Email: polartechai@gmail.com</p>
             <p><i class="fas fa-phone-alt"></i> Telefon: +372 529 4950</p>
             <p><i class="fas fa-map-marker-alt"></i> Location: Tallinn, Estonia</p>
@@ -112,6 +136,7 @@
     </div>
 </body>
 </html>
+
 
 
 
